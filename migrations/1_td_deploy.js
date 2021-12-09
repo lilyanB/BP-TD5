@@ -19,7 +19,7 @@ module.exports = (deployer, network, accounts) => {
 
 async function deployTDToken(deployer, network, accounts) {
 	//TDToken = await TDErc20.new("TD-ERC721-101","TD-ERC721-101",web3.utils.toBN("0"))
-	TDToken = await TDErc20.at("0x46a9Dc47185F769ef9a11927B0f9d2fd0dEc3304")
+	TDToken = await TDErc20.at("0x8B7441Cb0449c71B09B96199cCE660635dE49A1D")
 }
 
 async function deployEvaluator(deployer, network, accounts) {
