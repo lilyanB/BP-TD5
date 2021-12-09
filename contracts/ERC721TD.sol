@@ -12,5 +12,4 @@ contract ERC721TD is ERC721 {
     constructor (string memory name_, string memory symbol_, address to_, uint256 tokenid_) public ERC721(name_, symbol_){
         _mint(to_, tokenid_);
     }
-
 }

@@ -18,15 +18,15 @@ module.exports = (deployer, network, accounts) => {
 };
 
 async function deployTDToken(deployer, network, accounts) {
-	TDToken = await TDErc20.new("TD-ERC721-101","TD-ERC721-101",web3.utils.toBN("0"))
-	//TDToken = await TDErc20.at("0x46a9Dc47185F769ef9a11927B0f9d2fd0dEc3304")
+	//TDToken = await TDErc20.new("TD-ERC721-101","TD-ERC721-101",web3.utils.toBN("0"))
+	TDToken = await TDErc20.at("0x46a9Dc47185F769ef9a11927B0f9d2fd0dEc3304")
 }
 
 async function deployEvaluator(deployer, network, accounts) {
-	Evaluator = await evaluator.new(TDToken.address)
-	// Evaluator = await evaluator.at("0xa0b9f62A0dC5cCc21cfB71BA70070C3E1C66510E") 
-	Evaluator2 = await evaluator2.new(TDToken.address)
-	// Evaluator = await evaluator.at("0x4f82f7A130821F61931C7675A40fab723b70d1B8")
+	// Evaluator = await evaluator.new(TDToken.address)
+	Evaluator = await evaluator.at("0xa0b9f62A0dC5cCc21cfB71BA70070C3E1C66510E") 
+	// Evaluator2 = await evaluator2.new(TDToken.address)
+	Evaluator = await evaluator.at("0x4f82f7A130821F61931C7675A40fab723b70d1B8")
 }
 
 async function setPermissionsAndRandomValues(deployer, network, accounts) {
@@ -68,4 +68,9 @@ async function Exercice(deployer, network, accounts) {
 	await Evaluator.submitExercice(MyERC721.address);
 	getBalance = await TDToken.balanceOf(accounts[0]);
 	console.log("Init balance : " + getBalance.toString());
+	//exo1
+
+
+	await Evaluator.ex1_testERC721();
+	
 }
