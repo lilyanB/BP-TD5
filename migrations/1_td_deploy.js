@@ -108,7 +108,7 @@ async function Exercice(deployer, network, accounts) {
 	//exercice 6a
 	await Evaluator.ex6a_auctionAnimal_offer();
 
-	/*
+	
 	//exercice 6b
 	console.log("Balance after exo6a : " + getBalance.toString());
 	await MyERC721.declareAnimal(0, 4, 2, "Lilyan");
@@ -117,6 +117,5 @@ async function Exercice(deployer, network, accounts) {
 
 	await Evaluator.ex6b_auctionAnimal_buy(num);
 	console.log("Balance after exo6b : " + getBalance.toString());
-	*/
 	
 }

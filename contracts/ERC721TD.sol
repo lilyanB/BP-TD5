@@ -153,7 +153,6 @@ contract ERC721TD is ERC721 {
 	}
 
 	function offerForReproduction(uint animalNumber, uint priceOfReproduction) external onlyAnimalOwner(animalNumber) returns (uint256){
-		require(priceOfReproduction > 0);
 		_tokens[animalNumber].canReproduce = true;
 		_tokens[animalNumber].reproductionPrice = priceOfReproduction;
 		return animalNumber;
